@@ -1,26 +1,24 @@
+//explicit types
+var character;
+var age;
+var isLoggedIn;
+age = 30;
+isLoggedIn = true;
 //arrays
-var names = ['abc', 'def', 'ghi'];
-names.push('toad');
-// names.push(3);
-//names[0]=3;
-var nums = [10, 20, 30, 40];
-//nums.push('sawn');
-var mixed = ['ken', 4, 'chunli', 8, 9];
-mixed.push('ryu');
-mixed.push(10);
-mixed[0] = 3;
+var ninjas;
+ninjas = ['abc', 'cde'];
+//or
+var people = [];
+people.push('shawn');
+//union types
+var mixed = [];
+mixed.push('hello');
+mixed.push(12);
+mixed.push(false);
+console.log(mixed);
 //objects
-var ninja = {
-    name: 'mario',
-    belt: 'black',
-    age: 30
-};
-ninja.age = 40;
-ninja.name = 'ryu';
-//ninja.skills =['fighting', 'sneaking'];
-ninja = {
-    name: 'yoshi',
-    belt: 'orange',
-    age: 40,
-};
-//you can just modify the arrays of objects you can't change the structure of an object
+var ninjaOne;
+ninjaOne = { name: 'Ryu', belt: 'black' };
+var people2;
+people2 = { name: 'mario', age: 21, beltcolor: 'black' };
+console.log(people2);

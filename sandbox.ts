@@ -1,41 +1,42 @@
+//explicit types
+let character: string;
+
+let age: number;
+
+let isLoggedIn: boolean;
+
+age= 30;
+
+isLoggedIn= true;
+
 //arrays
+let ninjas: string[];
 
-let names= ['abc', 'def', 'ghi'];
+ninjas= ['abc', 'cde'];
 
-names.push('toad');
+           //or
 
-// names.push(3);
+let people: string[]=[];
 
-//names[0]=3;
+people.push('shawn');
 
-let nums= [10, 20, 30, 40];
-
-//nums.push('sawn');
-
-
-let mixed = ['ken', 4, 'chunli', 8, 9];
-
-mixed.push('ryu');
-mixed.push(10);
-mixed[0]=3;
+//union types
+let mixed: (string|number|boolean)[] =[];
+mixed.push('hello');
+mixed.push(12);
+mixed.push(false);
+console.log(mixed);
 
 //objects
+let ninjaOne: object;
+ninjaOne={name:'Ryu', belt:'black'};
 
-let ninja= {
-    name: 'mario',
-    belt: 'black',
-    age: 30
+let people2:{
+    name: string,
+    age: number,
+    beltcolor: string,
 }
 
-ninja.age =40;
+people2 = {name: 'mario', age: 21, beltcolor: 'black'};
 
-ninja.name='ryu';
-//ninja.skills =['fighting', 'sneaking'];
-
-ninja={
-    name: 'yoshi',
-    belt:'orange',
-    age: 40,
-}
-
-//you can just modify the arrays of objects you can't change the structure of an object
+console.log(people2);
