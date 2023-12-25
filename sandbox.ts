@@ -1,17 +1,41 @@
-let character = 'mario';
+//arrays
 
-let age = 20;
+let names= ['abc', 'def', 'ghi'];
 
-let isBlackBelt= false;
+names.push('toad');
 
-//character = 20;
+// names.push(3);
 
-character ='vonser';
+//names[0]=3;
 
-isBlackBelt= true;
+let nums= [10, 20, 30, 40];
 
-const circ = (diameter: number) =>{
-    return diameter * Math.PI;
+//nums.push('sawn');
+
+
+let mixed = ['ken', 4, 'chunli', 8, 9];
+
+mixed.push('ryu');
+mixed.push(10);
+mixed[0]=3;
+
+//objects
+
+let ninja= {
+    name: 'mario',
+    belt: 'black',
+    age: 30
 }
 
-console.log(circ(29));
+ninja.age =40;
+
+ninja.name='ryu';
+//ninja.skills =['fighting', 'sneaking'];
+
+ninja={
+    name: 'yoshi',
+    belt:'orange',
+    age: 40,
+}
+
+//you can just modify the arrays of objects you can't change the structure of an object
