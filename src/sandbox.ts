@@ -1,35 +1,26 @@
-//function signatures
-
-
-//example 1
-let greet: (a: string, b:string) => void;
-
-greet = (name: string, greeting: string) => {
-    console.log(`${name} says ${greeting}`);
+const anchor = document.querySelector('a')!;
+if(anchor) {
+  console.log(anchor.href);
 }
+console.log(anchor.href);
 
-//example2
+//const form = document.querySelector('form')!;
+const form = document.querySelector('.new-item-form') as HTMLFormElement;
+console.log(form.children);
 
-let calc: (a: number, b: number, c: string) => number;
+// inputs
+const type = document.querySelector('#type') as HTMLInputElement;
+const tofrom = document.querySelector('#tofrom') as HTMLInputElement;
+const details = document.querySelector('#details') as HTMLInputElement;
+const amount = document.querySelector('#amount') as HTMLInputElement;
 
-calc = (x: number, y: number, op: string): number => {
-    if (op === '+') {
-        return x + y;
-    } else if (op === '-') {
-        return x - y;
-    } else {
-        // Default case for unsupported operations
-        console.error("Unsupported operation: " + op);
-        return NaN; // or any other appropriate value
-    }
-};
+form.addEventListener('submit', (e: Event) => {
+  e.preventDefault();
 
-
-//exampe3
-
-let logDetails: (obj: {name: string, age: number}) => void;
-type person = {name: string, age: number};
-
-logDetails = (ninja:person) => {
-    console.log(`${ninja.name} is ${ninja.age} yeas old`);
-}
+  console.log(
+    type.value, 
+    tofrom.value, 
+    details.value, 
+    amount.valueAsNumber
+  );
+});
